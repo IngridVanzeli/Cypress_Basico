@@ -18,6 +18,10 @@ jobs:
             - name: Checkout do projeto
               uses: actions/checkout@v4
         
+            # instalar dependencias do projeto
+            - name: Instalar Dependencias do Projeto
+              run: npm install
+              
             # execução e config do projeto
             - name: Run Cypress
               uses: cypress-io/github-action@v6
