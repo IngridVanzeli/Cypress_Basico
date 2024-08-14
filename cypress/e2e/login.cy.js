@@ -20,7 +20,7 @@ describe("Login", () => {
         login_page.validarMenssagemLoginSucesso(email)
     })
 
-    it.only('Email vazio', () => {
+    it('Email vazio', () => {
         login_page.clicarlogin()
         login_page.validarMenssagemErro('E-mail inválido.')
     })
