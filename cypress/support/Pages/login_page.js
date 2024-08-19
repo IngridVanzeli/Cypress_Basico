@@ -14,6 +14,7 @@ export default {
 
     clicarlogin() {
         cy.get('#btnLogin')
+            .should('be.visible')
             .click()
     },
 
