@@ -20,13 +20,13 @@ describe("Login", () => {
         login_page.validarMenssagemLoginSucesso(email)
     })
 
-    it('Email vazio', () => {
+    it('Email invalido', () => {
+        login_page.preencheEmail('email')
         login_page.clicarlogin()
         login_page.validarMenssagemErro('E-mail inválido.')
     })
 
-    it('Email invalido', () => {
-        login_page.preencheEmail('email')
+    it('Email vazio', () => {
         login_page.clicarlogin()
         login_page.validarMenssagemErro('E-mail inválido.')
     })
