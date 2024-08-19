@@ -1,19 +1,22 @@
 /// <reference types="cypress" />
 
+const login = '.fa.fa-user'
+const cadastroUsuario = '.fa.fa-lock'
+
 export default {
-    acesseCadastroUsuario() {
+    acesseCadastroUsuario(){
         cy.visit('/')
             .get('#top_header')
 
-        cy.get('.fa-lock')
+        cy.get(cadastroUsuario)
             .click()
     },
-
-    acesseLogin() {
+    acesseLogin(){
         cy.visit('/')
             .get('#top_header')
-
-        cy.get('.fa-user')
+        
+        cy.get(login)
             .click()
+       
     }
 }
