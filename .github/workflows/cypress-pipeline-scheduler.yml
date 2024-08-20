@@ -1,10 +1,10 @@
 # nome da pipeline
-name: Run Cypress Básico
+name: Run Cypress Básico - Scheduler
 
 #em que momento sera excutada
 on: 
-  pull_request:
-      branches: [master]
+  schedule:
+    - cron: '0 20,22,23 * * 1-5'
 
 jobs:
     #no que vai ser feito nesse pipeline, e só teremos um job, que é rodar os testes
