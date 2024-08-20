@@ -33,7 +33,7 @@ export default {
     validarMenssagemCadastroSucesso(name) {
         cy.get('#swal2-title')
             .should('be.visible')
-            .should('have.text', 'Cadastro Realizado!')
+            .should('have.text', 'Cadastro realizado!')
 
             cy.get('#swal2-html-container')
             .should('be.visible')
