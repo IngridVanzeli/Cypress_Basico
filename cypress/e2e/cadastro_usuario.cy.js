@@ -50,7 +50,7 @@ describe("Cadastro de Usuario", () => {
     })
 
      //Cadastro realizdo com sucesso
-     it.only('Cadastro usuario com sucesso', async() => {
+     it('Cadastro usuario com sucesso', async() => {
 
         const namefaker = await faker.name.fullName()
 
