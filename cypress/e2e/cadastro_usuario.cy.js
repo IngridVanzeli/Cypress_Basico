@@ -10,18 +10,6 @@ describe("Cadastro de Usuario", () => {
         commum_page.acesseCadastroUsuario()
     })
 
-    //Cadastro realizdo com sucesso
-    it('Cadastro usuario com sucesso', async() => {
-
-        const namefaker = await faker.name.fullName()
-
-        cadastro_page.preencheNome(namefaker)
-        cadastro_page.preencheEmail(faker.internet.email())
-        cadastro_page.preencheSenha(faker.internet.password())
-        cadastro_page.clickCadastrar()
-        cadastro_page.validarMenssagemCadastroSucesso(namefaker)
-    })
-
     //campo nome vazio
     it('Valida campo nome vazio', () => {
        cadastro_page.clickCadastrar()
@@ -52,12 +40,24 @@ describe("Cadastro de Usuario", () => {
         cadastro_page.validarMenssagemErro('O campo senha deve ter pelo menos 6 dígitos')
     })
 
-    //campo senha invalida
+    //campo senha invalidagit
     it('Valiza campo senha invalida', () => {
         cadastro_page.preencheNome(faker.name.fullName())
         cadastro_page.preencheEmail(faker.internet.email())
         cadastro_page.preencheSenha(12345)
         cadastro_page.clickCadastrar()
         cadastro_page.validarMenssagemErro('O campo senha deve ter pelo menos 6 dígitos')
+    })
+
+     //Cadastro realizdo com sucesso
+     it('Cadastro usuario com sucesso', async() => {
+
+        const namefaker = await faker.name.fullName()
+
+        cadastro_page.preencheNome(namefaker)
+        cadastro_page.preencheEmail(faker.internet.email())
+        cadastro_page.preencheSenha(faker.internet.password())
+        cadastro_page.clickCadastrar()
+        cadastro_page.validarMenssagemCadastroSucesso(namefaker)
     })
 })
