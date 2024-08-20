@@ -40,7 +40,7 @@ describe("Cadastro de Usuario", () => {
         cadastro_page.validarMenssagemErro('O campo senha deve ter pelo menos 6 dígitos')
     })
 
-    //campo senha invalida
+    //campo senha invalidagit
     it('Valiza campo senha invalida', () => {
         cadastro_page.preencheNome(faker.name.fullName())
         cadastro_page.preencheEmail(faker.internet.email())
